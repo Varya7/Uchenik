@@ -51,6 +51,11 @@ class RecordingActivity : AppCompatActivity(), Timer.OnTimerTickListener{
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        try {
+            this.supportActionBar!!.hide()
+        } // catch block to handle NullPointerException
+        catch (e: NullPointerException) {
+        }
         setContentView(R.layout.activity_recording)
 
         permissionGranted = ActivityCompat.checkSelfPermission(this, permissions[0]) == PackageManager.PERMISSION_GRANTED

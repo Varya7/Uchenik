@@ -31,7 +31,7 @@ public class ArchivedActivity extends AppCompatActivity {
         catch (NullPointerException e) {
         }
 
-        getSupportActionBar().setTitle("Архив");
+      //  getSupportActionBar().setTitle("Архив");
         setContentView(R.layout.activity_archived);
 
         mydb = new DBHelper(this);

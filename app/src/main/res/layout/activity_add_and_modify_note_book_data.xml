@@ -20,12 +20,15 @@
         android:background="@android:color/transparent"
         android:hint="Описание"
         android:textSize="16dp"/>
+
     <Button
         android:id="@+id/save_btn"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_alignParentBottom="true"
-        android:text="Добавить"
-        android:textColor="@android:color/white"
-        android:background="@drawable/ripple_btn"/>
+        android:layout_marginBottom="0dp"
+        android:background="@drawable/button_red"
+        android:text="СОХРАНИТЬ"
+        android:textColor="#FFFFFF" />
+
 </RelativeLayout>

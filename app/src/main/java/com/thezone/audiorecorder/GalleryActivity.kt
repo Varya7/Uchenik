@@ -1,13 +1,13 @@
 package com.thezone.audiorecorder
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
 import android.view.View
 import android.widget.*
 import androidx.appcompat.app.AlertDialog
+import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.res.ResourcesCompat
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.room.Room
@@ -43,7 +43,13 @@ class GalleryActivity : AppCompatActivity(), OnItemClickListener {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        try {
+            this.supportActionBar!!.hide()
+        } // catch block to handle NullPointerException
+        catch (e: NullPointerException) {
+        }
         setContentView(R.layout.activity_gallery)
+        // try block to hide Action bar
 
         toolbar = findViewById(R.id.toolbar)
         setSupportActionBar(toolbar)

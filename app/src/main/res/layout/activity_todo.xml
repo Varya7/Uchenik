@@ -3,7 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFFFFF">
+    android:background="#FFFFFF"
+    android:padding="10dp">
 
 
     <androidx.core.widget.NestedScrollView
@@ -120,19 +121,10 @@
         android:visibility="visible">
 
         <TextView
-            android:id="@+id/emptyTxt"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text=""
-            android:textColor="#EC5D5D"
-            android:textSize="38dp"
-            android:textStyle="normal" />
-
-        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="На сегодня нет задач"
-            android:textColor="#323872"
+            android:textColor="#5F66B0"
             android:textSize="34dp"
             android:textStyle="bold" />
 
@@ -146,17 +138,16 @@
             android:textStyle="bold" />
 
         <Button
-            style="?android:attr/borderlessButtonStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="50dp"
-            android:background="@drawable/radius_border_button"
             android:onClick="openAddModifyTask"
             android:paddingHorizontal="70dp"
             android:paddingVertical="15dp"
             android:text="Добавить задачу"
-            android:textColor="@drawable/radius_border_button_text" />
+            android:background="@drawable/button_gray"
+            />
 
     </LinearLayout>
 

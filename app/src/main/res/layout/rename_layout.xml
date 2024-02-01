@@ -33,23 +33,25 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:layout_marginBottom="20dp">
-        <com.google.android.material.button.MaterialButton
+
+        <Button
             android:id="@+id/btnCancel"
             android:layout_width="140dp"
             android:layout_height="60dp"
-            android:text="отмена"
             android:backgroundTint="@color/gray"
+            android:text="отмена"
+            android:background="@drawable/button_gray"
             android:textColor="@color/grayDark"
             app:cornerRadius="26dp"
-            app:rippleColor="@color/grayDark"/>
+            app:rippleColor="@color/grayDark" />
 
-        <com.google.android.material.button.MaterialButton
+        <Button
             android:id="@+id/btnSave"
             android:layout_width="140dp"
             android:layout_height="60dp"
             android:text="сохранить"
             android:layout_marginStart="20dp"
-            android:backgroundTint="@color/strokeColor"
+            android:background="@drawable/button_blue"
             android:textColor="@color/white"
             app:cornerRadius="26dp"
             app:rippleColor="@color/grayDark"/>

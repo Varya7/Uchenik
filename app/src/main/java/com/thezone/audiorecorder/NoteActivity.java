@@ -30,6 +30,13 @@ public class NoteActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        try {
+            //this.getSupportActionBar().hide();
+            getSupportActionBar().show();
+        }
+        // catch block to handle NullPointerException
+        catch (NullPointerException e) {
+        }
         setContentView(R.layout.activity_note);
 
         mydb = new DBHelper(this);
@@ -44,7 +51,6 @@ public class NoteActivity extends AppCompatActivity {
                 i.putExtra("action","add");
                 startActivity(i);
             }
-
         });
     }
 
@@ -65,7 +71,6 @@ public class NoteActivity extends AppCompatActivity {
             default:
                 return super.onOptionsItemSelected(item);
         }
-
     }
 
     @Override
@@ -137,5 +142,8 @@ public class NoteActivity extends AppCompatActivity {
                 }
             });
         }
+    }
+    public void ShowArchive(View view){
+        startActivity(new Intent(NoteActivity.this, ArchivedActivity.class));
     }
 }

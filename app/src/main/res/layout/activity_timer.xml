@@ -20,7 +20,7 @@
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.915" />
+        app:layout_constraintVertical_bias="0.845" />
 
     <EditText
         android:id="@+id/edit_text_input"
@@ -36,7 +36,7 @@
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.921" />
+        app:layout_constraintVertical_bias="0.65" />
 
     <Button
         android:id="@+id/button_set"
@@ -45,6 +45,7 @@
         android:layout_alignTop="@+id/edit_text_input"
         android:layout_toEndOf="@+id/edit_text_input"
         android:text="Создать"
+        android:background="@drawable/button_gray"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/text_view_countdown"
@@ -73,6 +74,7 @@
         android:layout_below="@+id/text_view_countdown"
         android:layout_centerHorizontal="true"
         android:text="старт"
+        android:background="@drawable/button_red"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.526"
@@ -87,6 +89,7 @@
         android:layout_below="@+id/text_view_countdown"
         android:layout_toEndOf="@+id/button_start_pause"
         android:text="сброс"
+        android:background="@drawable/button_gray"
         android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -95,4 +98,16 @@
         app:layout_constraintTop_toBottomOf="@+id/button_set"
         app:layout_constraintVertical_bias="0.09"
         tools:visibility="visible" />
+
+    <EditText
+        android:id="@+id/edit_text_sec"
+        android:layout_width="135dp"
+        android:layout_height="44dp"
+        android:ems="10"
+        android:hint="Секунды"
+        android:inputType="time"
+        app:layout_constraintBottom_toTopOf="@+id/text_view_countdown"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edit_text_input" />
 </androidx.constraintlayout.widget.ConstraintLayout>
